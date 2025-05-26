@@ -9,8 +9,37 @@ using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Carregar configuração adicional do JWT
+builder.Configuration.AddJsonFile("appsettings.Jwt.json", optional: true, reloadOnChange: true);
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Configurar autenticação JWT
+var jwtSettings = builder.Configuration.GetSection("Jwt");
+var keyString = jwtSettings["Key"];
+if (string.IsNullOrEmpty(keyString))
+{
+    throw new Exception("JWT Key is not configured.");
+}
+var key = System.Text.Encoding.ASCII.GetBytes(keyString);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtSettings["Issuer"],
+        ValidAudience = jwtSettings["Audience"],
+        IssuerSigningKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(key)
+    };
+});
 
 builder.Services.AddOpenApi();
 
@@ -184,7 +213,32 @@ app.MapPost("/login", async (HttpContext http, AppDbContext db, LoginRequest log
 
     Log($"Login efetuado com sucesso para o usuário '{username}'");
 
-    return Results.Json(new { message = "Login efetuado com sucesso.", success = true });
+    // Gerar token JWT
+    var tokenHandler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+    var keyString = jwtSettings["Key"];
+    if (string.IsNullOrEmpty(keyString))
+    {
+        throw new Exception("JWT Key is not configured.");
+    }
+    var key = System.Text.Encoding.ASCII.GetBytes(keyString);
+    var tokenDescriptor = new Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor
+    {
+        Subject = new System.Security.Claims.ClaimsIdentity(new[]
+        {
+            new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Name, user.Username),
+            new System.Security.Claims.Claim("Perfil", user.Perfil ?? "")
+        }),
+        Expires = DateTime.UtcNow.AddMinutes(int.Parse(jwtSettings["ExpireMinutes"])),
+        Issuer = jwtSettings["Issuer"],
+        Audience = jwtSettings["Audience"],
+        SigningCredentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(
+            new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(key),
+            Microsoft.IdentityModel.Tokens.SecurityAlgorithms.HmacSha256Signature)
+    };
+    var token = tokenHandler.CreateToken(tokenDescriptor);
+    var tokenString = tokenHandler.WriteToken(token);
+
+    return Results.Json(new { message = "Login efetuado com sucesso.", success = true, token = tokenString });
 });
 
 

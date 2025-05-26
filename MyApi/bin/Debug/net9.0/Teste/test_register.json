@@ -1,0 +1,8 @@
+{
+  "Username": "testuser",
+  "Password": "testpassword",
+  "Nome": "Test User",
+  "Email": "testuser@example.com",
+  "Perfil": "User",
+  "IPAutorizado": ""
+}

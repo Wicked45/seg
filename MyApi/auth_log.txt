@@ -37,3 +37,10 @@
 2025-04-21 18:42:32 - Falha ao enviar email para email@exemplo.com: Failure sending mail.
 2025-04-21 18:44:51 - Tentativa de login para o usuário 'novoUsuario' do IP ::1
 2025-04-21 18:44:51 - Login efetuado com sucesso para o usuário 'novoUsuario'
+2025-05-26 15:42:57 - Novo usuário registrado: testuser1
+2025-05-26 15:43:48 - Tentativa de login para o usuário 'testuser2' do IP ::1
+2025-05-26 15:43:48 - Falha no login para o usuário 'testuser2': Usuário não encontrado
+2025-05-26 15:44:28 - Tentativa de login para o usuário 'testuser1' do IP ::1
+2025-05-26 15:44:28 - Login efetuado com sucesso para o usuário 'testuser1'
+2025-05-26 15:46:04 - Tentativa de login para o usuário 'testuser1' do IP ::1
+2025-05-26 15:46:04 - Login efetuado com sucesso para o usuário 'testuser1'

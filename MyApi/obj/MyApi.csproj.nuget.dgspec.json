@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\Seg\\MyApi\\MyApi.csproj": {}
+    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\git seg\\seg\\MyApi\\MyApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\Seg\\MyApi\\MyApi.csproj": {
+    "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\git seg\\seg\\MyApi\\MyApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\Seg\\MyApi\\MyApi.csproj",
+        "projectUniqueName": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\git seg\\seg\\MyApi\\MyApi.csproj",
         "projectName": "MyApi",
-        "projectPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\Seg\\MyApi\\MyApi.csproj",
+        "projectPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\git seg\\seg\\MyApi\\MyApi.csproj",
         "packagesPath": "C:\\Users\\The_w\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\Seg\\MyApi\\obj\\",
+        "outputPath": "C:\\Users\\The_w\\OneDrive\\Área de Trabalho\\git seg\\seg\\MyApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\The_w\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.4, )"
