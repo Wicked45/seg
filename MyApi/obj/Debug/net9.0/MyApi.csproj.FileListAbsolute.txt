@@ -163,7 +163,6 @@ C:\Users\The_w\OneDrive\Área de Trabalho\Seg\MyApi\obj\Debug\net9.0\refint\MyAp
 C:\Users\The_w\OneDrive\Área de Trabalho\Seg\MyApi\obj\Debug\net9.0\MyApi.pdb
 C:\Users\The_w\OneDrive\Área de Trabalho\Seg\MyApi\obj\Debug\net9.0\MyApi.genruntimeconfig.cache
 C:\Users\The_w\OneDrive\Área de Trabalho\Seg\MyApi\obj\Debug\net9.0\ref\MyApi.dll
-C:\Users\The_w\OneDrive\Área de Trabalho\git seg\seg\MyApi\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\The_w\OneDrive\Área de Trabalho\git seg\seg\MyApi\bin\Debug\net9.0\appsettings.json
 C:\Users\The_w\OneDrive\Área de Trabalho\git seg\seg\MyApi\bin\Debug\net9.0\appsettings.Jwt.json
 C:\Users\The_w\OneDrive\Área de Trabalho\git seg\seg\MyApi\bin\Debug\net9.0\Teste\test_2fa.json

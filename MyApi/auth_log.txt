@@ -1,46 +1,15 @@
-2025-04-21 16:29:25 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:34:54 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:36:06 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:36:46 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:39:47 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:44:11 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:49:13 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:49:55 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:57:29 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 16:57:29 - Falha no login para o usuário 'testuser': Usuário não encontrado
-2025-04-21 17:04:05 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 17:04:06 - Falha no login para o usuário 'testuser': Usuário não encontrado
-2025-04-21 17:19:32 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 17:19:32 - IP não autorizado para o usuário 'testuser'. Esperado: 127.0.0.1, Atual: ::1
-2025-04-21 17:23:17 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 17:23:17 - IP não autorizado para o usuário 'testuser'. Esperado: 127.0.0.1, Atual: ::1
-2025-04-21 17:29:39 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 17:29:39 - IP não autorizado para o usuário 'testuser'. Esperado: 127.0.0.1, Atual: ::1
-2025-04-21 17:31:32 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 17:31:32 - IP não autorizado para o usuário 'testuser'. Esperado(s): 127.0.0.1, Atual: ::1
-2025-04-21 17:32:51 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 17:32:51 - IP não autorizado para o usuário 'testuser'. Esperado(s): 127.0.0.1, Atual: ::1
-2025-04-21 17:35:43 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 17:35:43 - IP não autorizado para o usuário 'testuser'. Esperado(s): 127.0.0.1, Atual: ::1
-2025-04-21 17:39:07 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 17:39:07 - Falha ao enviar email para testuser@example.com: Failure sending mail.
-2025-04-21 18:19:13 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 18:19:14 - Falha ao enviar email para testuser@example.com: Failure sending mail.
-2025-04-21 18:21:57 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 18:21:58 - Falha ao enviar email para testuser@example.com: Failure sending mail.
-2025-04-21 18:27:34 - Tentativa de login para o usuário 'testuser' do IP ::1
-2025-04-21 18:27:35 - Falha ao enviar email para testuser@example.com: Failure sending mail.
-2025-04-21 18:37:58 - Novo usuário registrado: novoUsuario
-2025-04-21 18:38:28 - Tentativa de login para o usuário 'novoUsuario' do IP ::1
-2025-04-21 18:38:28 - Falha ao enviar email para email@exemplo.com: Failure sending mail.
-2025-04-21 18:42:32 - Tentativa de login para o usuário 'novoUsuario' do IP ::1
-2025-04-21 18:42:32 - Falha ao enviar email para email@exemplo.com: Failure sending mail.
-2025-04-21 18:44:51 - Tentativa de login para o usuário 'novoUsuario' do IP ::1
-2025-04-21 18:44:51 - Login efetuado com sucesso para o usuário 'novoUsuario'
-2025-05-26 15:42:57 - Novo usuário registrado: testuser1
-2025-05-26 15:43:48 - Tentativa de login para o usuário 'testuser2' do IP ::1
-2025-05-26 15:43:48 - Falha no login para o usuário 'testuser2': Usuário não encontrado
-2025-05-26 15:44:28 - Tentativa de login para o usuário 'testuser1' do IP ::1
-2025-05-26 15:44:28 - Login efetuado com sucesso para o usuário 'testuser1'
-2025-05-26 15:46:04 - Tentativa de login para o usuário 'testuser1' do IP ::1
-2025-05-26 15:46:04 - Login efetuado com sucesso para o usuário 'testuser1'
+[2025-06-26 20:01:31] Tentativa de login para o usuário 'pedro44'
+[2025-06-26 20:01:36] Código 2FA enviado para o usuário 'pedro44'
+[2025-06-26 20:02:24] Tentativa de verificação 2FA para o usuário 'pedro44'
+[2025-06-26 20:02:24] Códigos 2FA armazenados atualmente para usuários: 
+[2025-06-26 20:02:24] Falha na verificação 2FA para o usuário 'pedro44': Código não encontrado
+[2025-06-26 20:13:07] Tentativa de login para o usuário 'pedro43'
+[2025-06-26 20:13:11] Código 2FA enviado para o usuário 'pedro43'
+[2025-06-26 20:13:52] Tentativa de verificação 2FA para o usuário 'pedro43'
+[2025-06-26 20:13:52] Código esperado: 961172, Código recebido: 961172
+[2025-06-26 20:13:52] Verificação 2FA bem-sucedida para o usuário 'pedro43'
+[2025-07-01 19:38:43] Tentativa de login para o usuário 'tester'
+[2025-07-01 19:38:47] Código 2FA enviado para o usuário 'tester'
+[2025-07-01 19:39:29] Tentativa de verificação 2FA para o usuário 'tester'
+[2025-07-01 19:39:29] Código esperado: 743485, Código recebido: 743485
+[2025-07-01 19:39:29] Verificação 2FA bem-sucedida para o usuário 'tester'
