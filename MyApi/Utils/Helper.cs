@@ -34,7 +34,7 @@ namespace MyApi.Utils
         }
 
         private static readonly object _lock = new object();
-        private static readonly string logFilePath = "auth_log.txt";
+        private static readonly string logFilePath = System.IO.Path.Combine(AppContext.BaseDirectory, "auth_log.txt");
 
         public static void Log(string message)
         {
@@ -47,9 +47,9 @@ namespace MyApi.Utils
                     System.IO.File.AppendAllText(logFilePath, logEntry + Environment.NewLine);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                // Ignore logging errors to avoid affecting main flow
+                Console.WriteLine($"Erro ao gravar log de autenticação: {ex.Message}");
             }
         }
     }
